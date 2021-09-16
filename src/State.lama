@@ -1,6 +1,6 @@
 -- Empty state (undefined everywhere)
 public fun emptyState (x) {
-  failure ("undefined variable ""%s""\n", x)
+  failure ("undefined sdfsdfs variable ""%s""\n", x)
 }
 
 -- Putting a binding into a state
