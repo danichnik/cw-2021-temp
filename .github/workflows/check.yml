@@ -31,10 +31,10 @@ jobs:
           login=${{ github.event.pull_request.user.login }}
           echo "$login"
           echo "::set-output name=id::\"$login\""
-#          if [ "${{ github.base_ref }}" != "${{ github.head_ref }}" ]; then
-#            echo "base and head branch names differs: stop"
-#             exit 1
-#          fi
+          #          if [ "${{ github.base_ref }}" != "${{ github.head_ref }}" ]; then
+          #            echo "base and head branch names differs: stop"
+          #             exit 1
+          #          fi
           wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id=1XpZ9YqArvAm_0a67G5K8VjUK7FdOCJLZ' -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=1XpZ9YqArvAm_0a67G5K8VjUK7FdOCJLZ" -O cw-20201.tar.gz
           rm -rf /tmp/cookies.txt
           docker load < cw-20201.tar.gz
