@@ -41,10 +41,13 @@ jobs:
           echo "${{ github.event.pull_request.head.sha }}"
           echo "${{ github.event.pull_request.head.message }}"
           echo "${{ github.event.pull_request.head.created_at }}"
+          echo "${{ github.event.pull_request.head.committed_at }}"
           echo "4"
           echo "${{ github.event.pull_request.head.created_at }}"
           echo "5"
           echo "${{ github.event.pull_request.head.updated_at }}"
+          echo "${{ github.committed_at }}"
+          
 
 #         if [ "${{ github.base_ref }}" != "${{ github.head_ref }}" ]; then
 #           echo "base and head branch names differs: stop"
