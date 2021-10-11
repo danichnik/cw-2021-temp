@@ -31,6 +31,9 @@ jobs:
           login=${{ github.event.pull_request.user.login }}
           # echo "$login"
           echo "::set-output name=id::\"$login\""
+          echo "$GITHUB_CONTEXT"
+          echo "${{ github.event.head_commit.message }}"
+          echo "${{ github.event.head_commit.timestamp }}"          
           if [ "${{ github.base_ref }}" != "${{ github.head_ref }}" ]; then
             echo "base and head branch names differs: stop"
             exit 1
