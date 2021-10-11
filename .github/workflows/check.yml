@@ -37,7 +37,7 @@ jobs:
           echo "2"
           echo "${{ github.event.head_commit.message }}"
           echo "3"
-          echo "${{ github.event.head_commit.timestamp }}"
+          echo "${{ github.event.pull_request.head.timestamp }}"
           echo "4"
           echo "${{ github.event.pull_request.head.created_at }}"
           echo "5"
