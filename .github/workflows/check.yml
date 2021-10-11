@@ -29,12 +29,16 @@ jobs:
 #           echo ${head:0:3}
         run: |
           login=${{ github.event.pull_request.user.login }}
-          # echo "$login"
           echo "::set-output name=id::\"$login\""
+          echo "1"
           echo "$GITHUB_CONTEXT"
+          echo "2"
           echo "${{ github.event.head_commit.message }}"
+          echo "3"
           echo "${{ github.event.head_commit.timestamp }}"
+          echo "4"
           echo "${{ github.event.pull_request.head.created_at }}"
+          echo "5"
           echo "${{ github.event.pull_request.head.updated_at }}"
 
 #         if [ "${{ github.base_ref }}" != "${{ github.head_ref }}" ]; then
