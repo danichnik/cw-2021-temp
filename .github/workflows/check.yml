@@ -30,6 +30,7 @@ jobs:
         run: |
           login=${{ github.event.pull_request.user.login }}
           echo "::set-output name=id::\"$login\""
+          echo "${{ github.base_ref }}"
           echo "1"
           echo "$GITHUB_CONTEXT"
           echo "2"
